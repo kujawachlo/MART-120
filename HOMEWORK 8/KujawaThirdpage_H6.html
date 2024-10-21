@@ -19,15 +19,19 @@
 <body>
 
   <form action="nextPage.html" type="Post">
-    First & Last Name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span>
+    <input type="text" id="fName" placeholder="First/Last Name Required" required>
     <br>
-    Email Address: <input type="text" id="lName">&nbsp;<span id="lNameMessage"></span>
+    <input type="text" id="lName" placeholder="Email Address Required" required>
     <br>
     <br>
-    <h3>Accept Terms of Agreement?</h3>
-    <br>
-    <input type="radio" name="Yes" id="Yes" value="Yes">Yes<br>
-    <input type="radio" name="No" id="No" value="No">No<br>
+  </form>
+  <form>
+    <p>Accept Terms of Agreement?</p>
+    <input type="radio" id="YesB" name="Yes" value="YesB">
+    <label for="YesB">Yes</label>
+  
+    <input type="radio" id="NoB" name="Yes" value="NoB">
+    <label for="NoB">No</label>
   </form>
 </body>
     <meta charset="utf-8">
@@ -41,30 +45,29 @@
 
 <script>
   function checkboxes()
-  {
+{
     var First = document.getElementById("fName").value;
     if(First == "")
   {
-    document.getElementById("fName").style.backgroundColor = "red";
+    document.getElementById("fName").style.backgroundColor = "pink";
     document.getElementById("fName").focus();
     window.alert("...Please enter your Name");
   }
     var Email = document.getElementById("lName").value;
     if(Email == "")
   {
-    document.getElementById("lName").style.backgroundColor = "red";
+    document.getElementById("lName").style.backgroundColor = "pink";
     document.getElementById("lName").focus();
     window.alert("...Please enter your Email");
   }
 
-  var Yes = document.getElementById("Yes").value;
-  if(Yes = "1")
-  var No = document.getElementById("No").value;
-  if(No = "1")
-  {
-  window.alert("...Please complete terms");
-  }
+    var NoB = document.getElementById("NoB").value;
+    if( NoB = "1")
+    {
+      window.alert("...Please accept our Terms");
+    }
   }
 </script>
 
+</html>
 </html>
