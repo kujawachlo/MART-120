@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <title>Contact Us</title>
+</head>
+
+<body>
+  <h1>Contact Me!</h1>
+
+  <a href="KujawaHomepage_H6.html"> * Home *</a>
+  <a href="KujawaSecondpage_H6.html"> * More Stuff I Like *</a>
+
+<br>
+<br>
+
+  <head>
+    <title>Contact Me</title>
+  </head>
+<body>
+
+  <form action="nextPage.html" type="Post">
+    First & Last Name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span>
+    <br>
+    Email Address: <input type="text" id="lName">&nbsp;<span id="lNameMessage"></span>
+    <br>
+    <br>
+    <h3>Accept Terms of Agreement?</h3>
+    <br>
+    <input type="radio" name="Yes" id="Yes" value="Yes">Yes<br>
+    <input type="radio" name="No" id="No" value="No">No<br>
+  </form>
+</body>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<body>
+  <button type="button" class="btn btn-primary" onclick="checkboxes()">Submit</button>
+</body>
+
+<script>
+  function checkboxes()
+  {
+    var First = document.getElementById("fName").value;
+    if(First == "")
+  {
+    document.getElementById("fName").style.backgroundColor = "red";
+    document.getElementById("fName").focus();
+    window.alert("...Please enter your Name");
+  }
+    var Email = document.getElementById("lName").value;
+    if(Email == "")
+  {
+    document.getElementById("lName").style.backgroundColor = "red";
+    document.getElementById("lName").focus();
+    window.alert("...Please enter your Email");
+  }
+
+  var Yes = document.getElementById("Yes").value;
+  if(Yes = "1")
+  var No = document.getElementById("No").value;
+  if(No = "1")
+  {
+  window.alert("...Please complete terms");
+  }
+  }
+</script>
+
+</html>
