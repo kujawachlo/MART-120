@@ -31,5 +31,5 @@ square(50,150,50,10);
     line(150, 130, 200, 130);
 
 fill("black")
-  text('Chloe Kujawa', 110, 30);
+  text(' "Portrait" by: Chloe Kujawa', 75, 30);
 }
