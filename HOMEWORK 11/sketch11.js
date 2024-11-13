@@ -72,6 +72,35 @@ function draw()
         shapeY = height;
     }
 
+    fill("orange");
+    // draw the shape
+    square(shapeY, shapeX, 10);
+
+     // get a random speed when the it first starts
+     shapeXSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+     shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+
+    // move the shape
+    shapeX += shapeYSpeed;
+    shapeY += shapeXSpeed;
+    // check to see if the shape has gone out of bounds
+    if(shapeY > width)
+    {
+        shapeY = 0;
+    }
+    if(shapeX < 0)
+    {
+        shapeY = width;
+    }
+    if(shapeX > height)
+    {
+        shapeX = 0;
+    }
+    if(shapeY < 0)
+    {
+        shapeX = height;
+    }
+
     // check to see if the character has left the exit
     if(characterX > width && characterY > width-50)
     {
